@@ -1,0 +1,146 @@
+html {
+    background-color: rgb(26, 25, 25);
+}
+.container {
+	padding-top: 30px;
+}
+.slider {
+	width: 850px;
+	height: 650px;
+    text-align: center;
+	margin: auto;
+	overflow: hidden;
+}
+img {
+	width: 850px;
+	height: 500px;
+    border-radius: 10px;
+    
+}
+.pictures .season {
+    width: 25%;
+	float: left;
+}
+.pictures .images {
+    width: 400%;
+	line-height: 0;
+    
+}
+.slider_border {
+	width: 100%; 
+    overflow: hidden;
+}
+
+input {
+	cursor: pointer;
+	margin: 3px 5px 0px 5px;
+    position: relative;
+    /* bottom: 25px; */
+	width: 45px;
+    height: 45px;
+    top: 575px;
+    left: 300px; 
+    opacity: 0;
+  
+}
+
+.custom_checkbox {
+    display: flex;
+    justify-content: end;
+    padding-right: 23px;
+  }
+
+.check {
+    width: 20px;
+    height: 20px;
+    border: solid 4px rgb(5, 5, 241);
+    /* background-color: rgb(87, 143, 170); */
+    border-radius: 50%;
+    margin-left: 30.7px;
+    cursor: pointer;    
+    margin-top: -32px;
+}
+  check:hover {
+    background-color: rgb(225, 101, 140) !important;
+  }
+
+#button1:checked ~ .pictures .images {
+	margin-left: 0;
+}
+#button2:checked ~ .pictures .images  {
+	margin-left: -100%;
+}
+#button3:checked ~ .pictures .images  {
+	margin-left: -200%;
+}
+#button4:checked ~ .pictures .images  {
+	margin-left: -300%;
+}
+.pictures .images {
+    transition: all 1s cubic-bezier(0.550, 0.150, 0.200, 1.000);
+}
+
+
+
+
+.content {
+    margin-top: 20px;
+    height: auto;
+    padding-top: 20px;
+}
+
+.time {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.4em;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    min-width: 850px;
+    text-align: start;
+}
+.text {
+    display: flex;
+    
+}
+
+.content .time {
+    width: 25%;
+	float: left;
+}
+.content text {
+    width: 400%;
+	line-height: 0;
+}
+.text_border {
+	width: 100%; 
+    overflow: hidden;
+}
+
+#button1:checked ~ .content .text {
+	margin-left: 0;
+}
+#button2:checked ~ .content .text  {
+	margin-left: -100%;
+}
+#button3:checked ~ .content .text  {
+	margin-left: -200%;
+}
+#button4:checked ~ .content .text  {
+	margin-left: -300%;
+}
+.content .text {
+    transition: all 1s cubic-bezier(0.550, 0.150, 0.200, 1.000);
+  /* transition: visibility 1s; */
+}
+
+#button1:checked ~  .content #check1{
+	background: brown;
+}
+#button2:checked ~ .content #check2{
+	background: brown;
+}
+#button3:checked ~ .content #check3{
+    background: brown;
+}
+#button4:checked ~ .content #check4{
+    background: brown;
+}
