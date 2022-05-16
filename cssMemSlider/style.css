@@ -1,0 +1,247 @@
+html {
+  background-color: rgb(26, 25, 25);
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 0 1rem;
+}
+body {
+  margin: auto;
+  overflow-x: hidden;
+}
+.container {
+  padding: 2rem 0 0 0;
+}
+.slider {
+  width: 75rem;
+  height: 45rem;
+  text-align: center;
+  margin: auto;
+  overflow: hidden;
+}
+
+img {
+  width: 75rem;
+  height: 40rem;
+  border-radius: 0.5em;
+}
+
+.pictures .season {
+  width: 25%;
+  float: left;
+}
+.pictures .images {
+  width: 400%;
+  line-height: 0;
+}
+.slider_border {
+  width: 100%;
+  overflow: hidden;
+}
+
+@media (max-width: 1240px) {
+  .container {
+    width: auto;
+  }
+  .slider {
+    width: auto;
+  }
+  .slider_border {
+    width: auto;
+  }
+  .pictures {
+    width: auto;
+  }
+  img {
+    width: auto;
+    /* height: 35rem; */
+  }
+  .content {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 769px) {
+  img {
+    width: 40rem;
+    height: 25rem;
+  }
+  .slider {
+    width: 40rem;
+  }
+  .content {
+      flex-direction:column-reverse;
+      max-width: 92%;
+  }
+  .custom_checkbox{
+      margin: 2rem 0 auto;
+  }
+  .time {
+    margin-left: 0.8em;
+    margin-top: 0.5rem;
+  }
+}
+@media (max-width: 690px) {
+  .container {
+    width: auto;
+  }
+  .slider {
+    width: auto;
+  }
+  .slider_border {
+    width: auto;
+  }
+  .pictures {
+    width: auto;
+  }
+  img {
+    width:100%;
+    height: 120%;
+  }
+  .season {
+    width: auto;
+  }
+}
+
+@media (max-width: 321px) {
+    img {
+      width: 18rem;
+      height: 15rem;
+    }
+    .slider {
+      width: 18rem;
+    }
+    .time {
+      min-width: 18rem !important;
+      margin-left: 0.4em;
+    }
+    .content {
+        flex-direction:column-reverse;
+    }
+    .custom_checkbox{
+        margin: 1rem auto 0;
+    }
+    .check {
+        max-width: 0.8rem;
+        max-height: 0.8rem;
+    }
+}
+
+input {
+  display: none;
+}
+label {
+  height: 3rem;
+  cursor: pointer;
+}
+.custom_checkbox {
+  display: inline;
+  display: flex;
+  justify-content: end;
+}
+
+.check {
+  width: 1rem;
+  height: 1rem;
+  border: solid 4px rgb(87, 143, 170);
+  background-color: rgb(87, 143, 170);
+  border-radius: 50%;
+  margin: auto 1rem;
+  cursor: pointer;
+  position: relative;
+  top: 1rem;
+}
+label:hover .check {
+  background-color: rgb(248, 248, 248);
+  border: solid 4px rgb(248, 248, 248);
+}
+
+#button1:checked ~ .pictures .images {
+  margin-left: 0;
+}
+#button2:checked ~ .pictures .images {
+  margin-left: -100%;
+}
+#button3:checked ~ .pictures .images {
+  margin-left: -200%;
+}
+#button4:checked ~ .pictures .images {
+  margin-left: -300%;
+}
+.pictures .images {
+  transition: all 1s cubic-bezier(0.55, 0.15, 0.2, 1);
+}
+
+.time {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.5em;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  min-width: 40rem;
+  text-align: start;
+}
+.background {
+  width: 60%;
+}
+.text {
+  display: flex;
+}
+.content {
+  display: flex;
+  padding: 0 3%;
+}
+
+.content .time {
+  width: 25%;
+  float: left;
+}
+.content text {
+  width: 400%;
+  line-height: 0;
+}
+.text_border {
+  width: 100%;
+  padding-top: 1em;
+  overflow: hidden;
+}
+
+#button1:checked ~ .content .text {
+  margin-left: 0;
+}
+#button2:checked ~ .content .text {
+  margin-left: -113%;
+}
+#button3:checked ~ .content .text {
+  margin-left: -226%;
+}
+#button4:checked ~ .content .text {
+  margin-left: -339%;
+}
+.content .text {
+  transition: all 1s cubic-bezier(0.55, 0.15, 0.2, 1);
+}
+
+#button1:checked ~ .content #check1 {
+  background-color: rgb(26, 25, 25);
+}
+#button1:checked ~ .content #check1:hover {
+  border: solid 4px rgb(248, 248, 248);
+}
+#button2:checked ~ .content #check2 {
+  background-color: rgb(26, 25, 25);
+}
+#button2:checked ~ .content #check2:hover {
+  border: solid 4px rgb(248, 248, 248);
+}
+#button3:checked ~ .content #check3 {
+  background-color: rgb(26, 25, 25);
+}
+#button3:checked ~ .content #check3:hover {
+  border: solid 4px rgb(248, 248, 248);
+}
+#button4:checked ~ .content #check4 {
+  background-color: rgb(26, 25, 25);
+}
+#button4:checked ~ .content #check4:hover {
+  border: solid 4px rgb(248, 248, 248);
+}
