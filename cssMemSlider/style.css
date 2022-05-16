@@ -61,7 +61,7 @@ img {
     margin: 0 auto;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   img {
     width: 40rem;
     height: 25rem;
@@ -103,7 +103,7 @@ img {
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 310px) {
     img {
       width: 18rem;
       height: 15rem;
