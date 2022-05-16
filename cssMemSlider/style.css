@@ -14,7 +14,6 @@ body {
 }
 .slider {
   width: 75rem;
-  /* width: 1150px; */
   height: 45rem;
   text-align: center;
   margin: auto;
@@ -39,6 +38,7 @@ img {
   width: 100%;
   overflow: hidden;
 }
+
 @media (max-width: 1240px) {
   .container {
     width: auto;
@@ -54,22 +54,14 @@ img {
   }
   img {
     width: auto;
+    height: 35rem;
   }
   .content {
-    width: auto;
-    margin: 0 1%;
-  }
-  .season {
-    width: auto;
-  }
-  .text {
-    width: auto;
-  }
-  .text_border {
-    width: auto;
+    max-width: 100%;
+    margin: 0 auto;
   }
 }
-@media (max-width: 769px) {
+@media (max-width: 768px) {
   img {
     width: 40rem;
     height: 25rem;
@@ -79,14 +71,62 @@ img {
   }
   .content {
       flex-direction:column-reverse;
+      max-width: 92%;
   }
   .custom_checkbox{
-      margin: 0 auto;
+      margin: 2rem 0 auto;
   }
   .time {
-    margin-left: 0.8em
+    margin-left: 0.8em;
+    margin-top: 0.5rem;
   }
 }
+@media (max-width: 690px) {
+  .container {
+    width: auto;
+  }
+  .slider {
+    width: auto;
+  }
+  .slider_border {
+    width: auto;
+  }
+  .pictures {
+    width: auto;
+  }
+  img {
+    width:100%;
+    height: 120%;
+  }
+  .season {
+    width: auto;
+  }
+}
+
+@media (max-width: 320px) {
+    img {
+      width: 18rem;
+      height: 15rem;
+    }
+    .slider {
+      width: 18rem;
+    }
+    .time {
+      min-width: 18rem !important;
+      margin-left: 0.4em;
+    }
+    .content {
+        flex-direction:column-reverse;
+    }
+    .custom_checkbox{
+        margin: 2rem auto 0;
+    }
+    .check {
+        max-width: 0.8rem;
+        max-height: 0.8rem;
+    }
+}
+
 input {
   display: none;
 }
@@ -98,7 +138,6 @@ label {
   display: inline;
   display: flex;
   justify-content: end;
-  /* padding-right: 2rem; */
 }
 
 .check {
@@ -170,13 +209,13 @@ label:hover .check {
   margin-left: 0;
 }
 #button2:checked ~ .content .text {
-  margin-left: -112%;
+  margin-left: -113%;
 }
 #button3:checked ~ .content .text {
-  margin-left: -224%;
+  margin-left: -226%;
 }
 #button4:checked ~ .content .text {
-  margin-left: -337%;
+  margin-left: -339%;
 }
 .content .text {
   transition: all 1s cubic-bezier(0.55, 0.15, 0.2, 1);
